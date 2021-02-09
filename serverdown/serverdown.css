@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+
+#hand-wire{
+    animation: pluckwire 2.5s ease ;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    transform-box: fill-box;
+}
+
+@keyframes pluckwire{
+    from{
+        transform: rotateZ(0deg);
+    }
+
+    to{
+        transform: rotateZ(30deg);
+    }
+}
+
+#eye_ball{
+    animation: eyedance 2s ease infinite;
+}
+
+@keyframes eyedance{
+    0%{
+        transform: translateX(0px);
+    }
+
+    20%{
+        transform: translatey(10px);
+    }
+
+    40%{
+        transform: translateX(10px);
+    }
+
+    60%{
+        transform: translatex(-10px);
+    }
+
+    80%{
+        transform: translatey(8px);
+    }
+}
+
+#light1a, #light2a, #light3a{
+    animation: server_blink .3s infinite ;
+}
+
+@keyframes server_blink{
+    0%{
+        fill: white;
+    }
+
+    100%{
+        fill: #6C63FF;
+    }
+}
+
+#light1b, #light2b, #light3b{
+    animation: server_blink .4s infinite ;
+}
+
+#light1c, #light2c, #light3c{
+    animation: server_blink .5s infinite ;
+}
+
+#error{
+    opacity: 0%;
+    animation: error_blink 2s infinite ease;
+    animation-delay: 3s;
+}
+
+@keyframes error_blink{
+    0%{
+        opacity: .1;
+    }
+
+    25%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: .2;
+    }
+
+    75%{
+        opacity: .7;
+    }
+
+    100%{
+        opacity: .1;
+    }
+}
